@@ -1,5 +1,7 @@
+from django.urls import reverse
 from django.http import HttpResponse,JsonResponse
-from django.shortcuts import render
+from django.shortcuts import redirect
+
 
 # Create your views here.
 def demo_response(request):
@@ -35,3 +37,10 @@ def demo_json(request):
       'subject': 'python'
     }
     return JsonResponse(dict)
+
+def demo_redirect(request):
+    # 第二种用法: 将 reverse 和 redirect 搭配使用
+    url = reverse('lyq:res')
+    return redirect(url)
+
+
