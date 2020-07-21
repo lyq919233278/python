@@ -42,5 +42,3 @@ def demo_redirect(request):
     # 第二种用法: 将 reverse 和 redirect 搭配使用
     url = reverse('lyq:res')
     return redirect(url)
-
-
